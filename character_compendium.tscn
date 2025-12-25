@@ -1,0 +1,243 @@
+[gd_scene load_steps=27 format=3 uid="uid://c50tchif5v14d"]
+
+[ext_resource type="Script" path="res://scripts/compendium.gd" id="1_ljf86"]
+[ext_resource type="Texture2D" uid="uid://vv8jw6kp0b1y" path="res://assets/TextBox.png" id="2_iordf"]
+[ext_resource type="FontFile" uid="uid://bq8xnhyt1tj7" path="res://assets/upheavtt.ttf" id="3_yy5up"]
+[ext_resource type="Texture2D" uid="uid://6bxymbyf8lsn" path="res://assets/Button.png" id="4_brhtd"]
+[ext_resource type="Texture2D" uid="uid://df50y8ticyqun" path="res://assets/Who_.png" id="4_lecky"]
+[ext_resource type="Script" path="res://scripts/Minister1.gd" id="5_etwq7"]
+[ext_resource type="Texture2D" uid="uid://d3mkiaqyexm6x" path="res://assets/HoverButton.png" id="5_lgydp"]
+[ext_resource type="Script" path="res://scenes/Minister2.gd" id="6_6tem8"]
+[ext_resource type="Texture2D" uid="uid://c05ja8bf0js1q" path="res://assets/PressedButton(2).png" id="6_7tc6l"]
+[ext_resource type="Script" path="res://scripts/Reporter.gd" id="7_h4doi"]
+[ext_resource type="Script" path="res://scripts/Police.gd" id="8_becpq"]
+[ext_resource type="Script" path="res://scripts/SoState.gd" id="9_qnexf"]
+[ext_resource type="Script" path="res://scripts/clown.gd" id="10_1fcmt"]
+[ext_resource type="Script" path="res://scripts/secret.gd" id="11_86623"]
+[ext_resource type="Script" path="res://scripts/kitty.gd" id="12_xmtwl"]
+[ext_resource type="Script" path="res://scripts/illuminati.gd" id="13_sfc0y"]
+[ext_resource type="Texture2D" uid="uid://b1x1mfcgvonmj" path="res://assets/Pirate.png" id="17_3geo3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eb5ay"]
+texture = ExtResource("4_brhtd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ixpad"]
+texture = ExtResource("5_lgydp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wepjn"]
+texture = ExtResource("6_7tc6l")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_te75g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ovyqc"]
+font = ExtResource("3_yy5up")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_uhd43"]
+font = ExtResource("3_yy5up")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_nv0ha"]
+font = ExtResource("3_yy5up")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_kndfm"]
+font = ExtResource("3_yy5up")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_c0xou"]
+font = ExtResource("3_yy5up")
+font_size = 20
+
+[node name="Character Compendium" type="Node2D"]
+script = ExtResource("1_ljf86")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.412152, 0.412152, 0.412152, 1)
+z_index = -5
+position = Vector2(935, 940)
+scale = Vector2(3.28542, 8.99259)
+texture = ExtResource("2_iordf")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 950.0
+offset_top = 929.0
+offset_right = 995.0
+offset_bottom = 960.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yy5up")
+theme_override_styles/normal = SubResource("StyleBoxTexture_eb5ay")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ixpad")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wepjn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_te75g")
+text = "Back"
+
+[node name="Minister1Name" type="Label" parent="."]
+z_index = 1
+offset_left = 90.0
+offset_top = 331.0
+offset_right = 295.0
+offset_bottom = 394.0
+label_settings = SubResource("LabelSettings_ovyqc")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TransportMinister" type="Sprite2D" parent="."]
+position = Vector2(190, 173)
+texture = ExtResource("4_lecky")
+script = ExtResource("5_etwq7")
+
+[node name="Minister1Name2" type="Label" parent="."]
+z_index = 1
+offset_left = 90.0
+offset_top = 790.0
+offset_right = 295.0
+offset_bottom = 853.0
+text = "Minister of Health
+Bella M. Edicine"
+label_settings = SubResource("LabelSettings_uhd43")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HealthMinister" type="Sprite2D" parent="."]
+position = Vector2(190, 632)
+texture = ExtResource("4_lecky")
+script = ExtResource("6_6tem8")
+
+[node name="Minister1Name3" type="Label" parent="."]
+z_index = 1
+offset_left = 440.0
+offset_top = 331.0
+offset_right = 645.0
+offset_bottom = 394.0
+text = "Reporter
+Yusuf S. Coop"
+label_settings = SubResource("LabelSettings_nv0ha")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Reporter" type="Sprite2D" parent="."]
+position = Vector2(540, 173)
+texture = ExtResource("4_lecky")
+script = ExtResource("7_h4doi")
+
+[node name="Minister1Name4" type="Label" parent="."]
+z_index = 1
+offset_left = 440.0
+offset_top = 790.0
+offset_right = 645.0
+offset_bottom = 853.0
+text = "Head of the Police
+Aya A. Rest"
+label_settings = SubResource("LabelSettings_kndfm")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Police" type="Sprite2D" parent="."]
+position = Vector2(540, 632)
+texture = ExtResource("4_lecky")
+script = ExtResource("8_becpq")
+
+[node name="Minister1Name5" type="Label" parent="."]
+z_index = 1
+offset_left = 790.0
+offset_top = 331.0
+offset_right = 995.0
+offset_bottom = 394.0
+text = "Secratary of State
+Mishima D. Iplomat"
+label_settings = SubResource("LabelSettings_kndfm")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SoState" type="Sprite2D" parent="."]
+position = Vector2(890, 173)
+texture = ExtResource("4_lecky")
+script = ExtResource("9_qnexf")
+
+[node name="Minister1Name6" type="Label" parent="."]
+z_index = 1
+offset_left = 770.0
+offset_top = 790.0
+offset_right = 1009.0
+offset_bottom = 853.0
+text = "Rozo Dozo
+Clown of Randomness"
+label_settings = SubResource("LabelSettings_ovyqc")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Clown" type="Sprite2D" parent="."]
+position = Vector2(890, 632)
+texture = ExtResource("4_lecky")
+script = ExtResource("10_1fcmt")
+
+[node name="Minister1Name7" type="Label" parent="."]
+z_index = 1
+offset_left = 1120.0
+offset_top = 331.0
+offset_right = 1379.0
+offset_bottom = 394.0
+text = "Raj A. Gent
+Head of Secret Services"
+label_settings = SubResource("LabelSettings_ovyqc")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Secret" type="Sprite2D" parent="."]
+position = Vector2(1240, 173)
+texture = ExtResource("4_lecky")
+script = ExtResource("11_86623")
+
+[node name="Minister1Name8" type="Label" parent="."]
+z_index = 1
+offset_left = 1120.0
+offset_top = 790.0
+offset_right = 1359.0
+offset_bottom = 853.0
+text = "Mittens
+Cat"
+label_settings = SubResource("LabelSettings_ovyqc")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Kitty" type="Sprite2D" parent="."]
+position = Vector2(1240, 632)
+texture = ExtResource("4_lecky")
+script = ExtResource("12_xmtwl")
+
+[node name="Minister1Name9" type="Label" parent="."]
+z_index = 1
+offset_left = 1460.0
+offset_top = 790.0
+offset_right = 1706.0
+offset_bottom = 853.0
+text = "???
+Head of the Illuminati"
+label_settings = SubResource("LabelSettings_ovyqc")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Illuminati" type="Sprite2D" parent="."]
+position = Vector2(1590, 632)
+texture = ExtResource("4_lecky")
+script = ExtResource("13_sfc0y")
+
+[node name="Minister1Name10" type="Label" parent="."]
+z_index = 1
+offset_left = 1460.0
+offset_top = 331.0
+offset_right = 1699.0
+offset_bottom = 394.0
+text = "Jonsey Greybeard
+Pirate, obviously"
+label_settings = SubResource("LabelSettings_c0xou")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Pirate" type="Sprite2D" parent="."]
+position = Vector2(1590, 173)
+texture = ExtResource("17_3geo3")
+script = ExtResource("13_sfc0y")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

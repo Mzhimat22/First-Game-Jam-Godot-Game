@@ -1,0 +1,516 @@
+[gd_scene load_steps=50 format=3 uid="uid://c16ruiqgjjhn3"]
+
+[ext_resource type="Script" path="res://scripts/office.gd" id="1_386td"]
+[ext_resource type="FontFile" uid="uid://bq8xnhyt1tj7" path="res://assets/upheavtt.ttf" id="2_a0bdt"]
+[ext_resource type="Texture2D" uid="uid://bq60c0iid71gc" path="res://assets/BeegButton(1).png" id="3_4jq5o"]
+[ext_resource type="AudioStream" uid="uid://byq4em0yj3uv5" path="res://assets/glitch-sounds-26212-[AudioTrimmer.com].wav" id="3_i7qqj"]
+[ext_resource type="Texture2D" uid="uid://vv8jw6kp0b1y" path="res://assets/TextBox.png" id="3_nksbb"]
+[ext_resource type="Texture2D" uid="uid://6na7xvoydn42" path="res://assets/HBeegButton.png" id="4_8hodd"]
+[ext_resource type="Script" path="res://scripts/Minister1.gd" id="4_w0gqh"]
+[ext_resource type="Shader" path="res://shaders/office.gdshader" id="5_3hgrw"]
+[ext_resource type="Texture2D" uid="uid://bq488eb87c6e8" path="res://assets/PBeegButton.png" id="5_fuihm"]
+[ext_resource type="Script" path="res://scenes/Minister2.gd" id="5_g58sr"]
+[ext_resource type="Script" path="res://scripts/Reporter.gd" id="6_agerp"]
+[ext_resource type="AudioStream" uid="uid://cfkf0rmllbfvm" path="res://assets/Overflowistan Overture.ogg" id="6_dcxwv"]
+[ext_resource type="Script" path="res://scripts/Police.gd" id="7_pdoq8"]
+[ext_resource type="Texture2D" uid="uid://cv66n8xnqh0qu" path="res://assets/Health(1).png" id="8_pxvqo"]
+[ext_resource type="Script" path="res://scripts/SoState.gd" id="9_g54nl"]
+[ext_resource type="Texture2D" uid="uid://dantj1h4oothv" path="res://assets/Bella(1).png" id="9_uycdj"]
+[ext_resource type="Texture2D" uid="uid://b7c1i5xrb20pe" path="res://assets/Background(2).png" id="10_jf7us"]
+[ext_resource type="Texture2D" uid="uid://6bn735ll8jy2" path="res://assets/FinishedDebtBar.png" id="11_1m2gy"]
+[ext_resource type="Texture2D" uid="uid://df5fqncee3qcl" path="res://assets/Reporter(1).png" id="12_iaeu4"]
+[ext_resource type="Texture2D" uid="uid://c3q458ghltjp5" path="res://assets/DisapprovalBar.png" id="12_vl143"]
+[ext_resource type="Texture2D" uid="uid://dmheu0trfw86c" path="res://assets/CimeBar.png" id="13_px7t2"]
+[ext_resource type="Texture2D" uid="uid://b0x8twepuxivl" path="res://assets/GlobalBar.png" id="14_1pm3q"]
+[ext_resource type="Texture2D" uid="uid://d07whehamkpon" path="res://assets/Police(1).png" id="14_mp25e"]
+[ext_resource type="Texture2D" uid="uid://npa48s6kbdxa" path="res://assets/Overlay(1).png" id="15_4xidv"]
+[ext_resource type="Texture2D" uid="uid://db7regbdjy41w" path="res://assets/State(1).png" id="15_og4vm"]
+[ext_resource type="Texture2D" uid="uid://cvjld4a5x45o3" path="res://assets/Clown.png" id="18_8bc7l"]
+[ext_resource type="Script" path="res://scripts/clown.gd" id="19_wb887"]
+[ext_resource type="Script" path="res://scripts/secret.gd" id="20_m8xrp"]
+[ext_resource type="Texture2D" uid="uid://csftcc2f6ojyn" path="res://assets/State(2).png" id="20_u54dj"]
+[ext_resource type="Texture2D" uid="uid://6p6ixtmve4fx" path="res://assets/Cat.png" id="21_1wrwe"]
+[ext_resource type="Script" path="res://scripts/kitty.gd" id="22_p24va"]
+[ext_resource type="Script" path="res://scripts/illuminati.gd" id="23_4who0"]
+[ext_resource type="Texture2D" uid="uid://w5ss3ifrun4x" path="res://assets/Cat(1).png" id="24_vl4j5"]
+[ext_resource type="Texture2D" uid="uid://b1x1mfcgvonmj" path="res://assets/Pirate.png" id="34_530o4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xdfpd"]
+content_margin_right = 20.0
+texture = ExtResource("3_4jq5o")
+axis_stretch_horizontal = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e0bg5"]
+content_margin_right = 20.0
+texture = ExtResource("4_8hodd")
+modulate_color = Color(0.585062, 0.585062, 0.585062, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dlhs5"]
+content_margin_right = 20.0
+texture = ExtResource("5_fuihm")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x6rtk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ruf7k"]
+font = ExtResource("2_a0bdt")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_c3fk5"]
+font = ExtResource("2_a0bdt")
+font_size = 20
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yu3ax"]
+shader = ExtResource("5_3hgrw")
+shader_parameter/octave_count = 12
+shader_parameter/amp_start = 3.0
+shader_parameter/amp_coeff = 0.8
+shader_parameter/freq_coeff = 3.9
+shader_parameter/shift_coeff = 1.0
+shader_parameter/speed = 0.5
+
+[sub_resource type="LabelSettings" id="LabelSettings_glhcx"]
+font = ExtResource("2_a0bdt")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mt8xn"]
+font = ExtResource("2_a0bdt")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_7wct2"]
+font = ExtResource("2_a0bdt")
+font_size = 30
+font_color = Color(0.654599, 0, 0.125386, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5idu5"]
+font = ExtResource("2_a0bdt")
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_20r76"]
+font = ExtResource("2_a0bdt")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_imqtt"]
+font = ExtResource("2_a0bdt")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kln6a"]
+font = ExtResource("2_a0bdt")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fpkgt"]
+font = ExtResource("2_a0bdt")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[node name="office" type="Node2D"]
+script = ExtResource("1_386td")
+
+[node name="glitch_timer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="option_1" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 622.0
+offset_top = 577.0
+offset_right = 1372.0
+offset_bottom = 642.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_a0bdt")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_xdfpd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_e0bg5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dlhs5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x6rtk")
+text = "Start"
+
+[node name="option_2" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 622.0
+offset_top = 644.0
+offset_right = 1372.0
+offset_bottom = 709.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_a0bdt")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_xdfpd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_e0bg5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dlhs5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x6rtk")
+text = "Start"
+
+[node name="hovertext1" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1000.0
+offset_top = 750.0
+offset_right = 1040.0
+offset_bottom = 773.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_ruf7k")
+
+[node name="hovertext2" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1000.0
+offset_top = 750.0
+offset_right = 1040.0
+offset_bottom = 773.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_c3fk5")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_dcxwv")
+volume_db = -6.0
+
+[node name="Overflow" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_i7qqj")
+volume_db = -20.0
+
+[node name="TextHolder" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(1000, 490)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("3_nksbb")
+
+[node name="GlitchBackground" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+material = SubResource("ShaderMaterial_yu3ax")
+scale = Vector2(2, 2)
+texture = ExtResource("10_jf7us")
+centered = false
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -5
+scale = Vector2(2, 2)
+texture = ExtResource("10_jf7us")
+centered = false
+
+[node name="Debt" type="TextureProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1667.0
+offset_top = 85.0
+offset_right = 1772.0
+offset_bottom = 223.0
+grow_horizontal = 2
+grow_vertical = 2
+fill_mode = 3
+texture_under = ExtResource("11_1m2gy")
+texture_progress = ExtResource("11_1m2gy")
+
+[node name="Disapproval" type="TextureProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1667.0
+offset_top = 325.0
+offset_right = 1772.0
+offset_bottom = 463.0
+grow_horizontal = 2
+grow_vertical = 2
+fill_mode = 3
+texture_under = ExtResource("12_vl143")
+texture_progress = ExtResource("12_vl143")
+
+[node name="Crime" type="TextureProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1667.0
+offset_top = 585.0
+offset_right = 1772.0
+offset_bottom = 723.0
+grow_horizontal = 2
+grow_vertical = 2
+fill_mode = 3
+texture_under = ExtResource("13_px7t2")
+texture_progress = ExtResource("13_px7t2")
+
+[node name="GlobalTension" type="TextureProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1667.0
+offset_top = 805.0
+offset_right = 1772.0
+offset_bottom = 943.0
+grow_horizontal = 2
+grow_vertical = 2
+fill_mode = 3
+texture_under = ExtResource("14_1pm3q")
+texture_over = ExtResource("15_4xidv")
+texture_progress = ExtResource("14_1pm3q")
+
+[node name="TextBox" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 945.0
+offset_top = 380.0
+offset_right = 1044.0
+offset_bottom = 424.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_glhcx")
+horizontal_alignment = 1
+
+[node name="DaysnWeeks" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 12.0
+offset_right = 48.0
+offset_bottom = 35.0
+label_settings = SubResource("LabelSettings_mt8xn")
+
+[node name="Threatdays" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 12.0
+offset_right = 48.0
+offset_bottom = 35.0
+label_settings = SubResource("LabelSettings_7wct2")
+
+[node name="DebtText" type="Label" parent="."]
+offset_left = 1669.0
+offset_top = 40.0
+offset_right = 1724.0
+offset_bottom = 71.0
+text = "Debt:"
+label_settings = SubResource("LabelSettings_5idu5")
+
+[node name="DissaprovalText" type="Label" parent="."]
+offset_left = 1669.0
+offset_top = 280.0
+offset_right = 1874.0
+offset_bottom = 311.0
+text = "Disapproval rate:"
+label_settings = SubResource("LabelSettings_5idu5")
+
+[node name="CrimeText" type="Label" parent="."]
+offset_left = 1669.0
+offset_top = 540.0
+offset_right = 1798.0
+offset_bottom = 571.0
+text = "Crime Rate:"
+label_settings = SubResource("LabelSettings_5idu5")
+
+[node name="GlobalText" type="Label" parent="."]
+offset_left = 1669.0
+offset_top = 760.0
+offset_right = 1848.0
+offset_bottom = 791.0
+text = "Global Tension:"
+label_settings = SubResource("LabelSettings_5idu5")
+
+[node name="TransportMinister" type="Sprite2D" parent="."]
+position = Vector2(-137, 454)
+texture = ExtResource("8_pxvqo")
+script = ExtResource("4_w0gqh")
+
+[node name="Minister1Name" type="Label" parent="TransportMinister"]
+z_index = 1
+offset_left = -125.0
+offset_top = -139.0
+offset_right = 114.0
+offset_bottom = -76.0
+text = "Jack T. Rain
+Minister of Transport"
+label_settings = SubResource("LabelSettings_20r76")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HealthMinister" type="Sprite2D" parent="."]
+position = Vector2(-137, 450)
+texture = ExtResource("9_uycdj")
+script = ExtResource("5_g58sr")
+
+[node name="Minister1Name" type="Label" parent="HealthMinister"]
+z_index = 1
+offset_left = -102.0
+offset_top = -151.0
+offset_right = 103.0
+offset_bottom = -88.0
+text = "Bella M. Edicine
+Minister of Health"
+label_settings = SubResource("LabelSettings_imqtt")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Reporter" type="Sprite2D" parent="."]
+position = Vector2(-137, 450)
+texture = ExtResource("12_iaeu4")
+script = ExtResource("6_agerp")
+
+[node name="Minister1Name" type="Label" parent="Reporter"]
+z_index = 1
+offset_left = -86.0
+offset_top = -146.0
+offset_right = 81.0
+offset_bottom = -83.0
+text = "Yusuf S. Coop
+Reporter"
+label_settings = SubResource("LabelSettings_kln6a")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Police" type="Sprite2D" parent="."]
+position = Vector2(-137, 450)
+texture = ExtResource("14_mp25e")
+script = ExtResource("7_pdoq8")
+
+[node name="Minister1Name" type="Label" parent="Police"]
+z_index = 1
+offset_left = -111.0
+offset_top = -169.0
+offset_right = 88.0
+offset_bottom = -106.0
+text = "Aya A. Rest
+Head of the Police"
+label_settings = SubResource("LabelSettings_fpkgt")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SoState" type="Sprite2D" parent="."]
+position = Vector2(-137, 450)
+texture = ExtResource("15_og4vm")
+script = ExtResource("9_g54nl")
+
+[node name="Minister1Name" type="Label" parent="SoState"]
+z_index = 1
+offset_left = -105.0
+offset_top = -143.0
+offset_right = 99.0
+offset_bottom = -80.0
+text = "Mishima D. Iplomat
+Secratary of State"
+label_settings = SubResource("LabelSettings_fpkgt")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Clown" type="Sprite2D" parent="."]
+position = Vector2(-137, 454)
+texture = ExtResource("18_8bc7l")
+script = ExtResource("19_wb887")
+
+[node name="Minister1Name" type="Label" parent="Clown"]
+z_index = 1
+offset_left = -126.0
+offset_top = -168.0
+offset_right = 113.0
+offset_bottom = -105.0
+text = "Rozo Dozo
+Clown of Randomness"
+label_settings = SubResource("LabelSettings_20r76")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Secret" type="Sprite2D" parent="."]
+position = Vector2(-137, 454)
+texture = ExtResource("20_u54dj")
+script = ExtResource("20_m8xrp")
+
+[node name="Minister1Name" type="Label" parent="Secret"]
+z_index = 1
+offset_left = -126.0
+offset_top = -168.0
+offset_right = 113.0
+offset_bottom = -105.0
+text = "Raj A. Gent
+Head of Secret Services"
+label_settings = SubResource("LabelSettings_20r76")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Kitty" type="Sprite2D" parent="."]
+position = Vector2(-137, 454)
+texture = ExtResource("21_1wrwe")
+script = ExtResource("22_p24va")
+
+[node name="Minister1Name" type="Label" parent="Kitty"]
+z_index = 1
+offset_left = -126.0
+offset_top = -168.0
+offset_right = 113.0
+offset_bottom = -105.0
+text = "Mittens
+Cat"
+label_settings = SubResource("LabelSettings_20r76")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Illuminati" type="Sprite2D" parent="."]
+position = Vector2(-137, 454)
+texture = ExtResource("24_vl4j5")
+script = ExtResource("23_4who0")
+
+[node name="Minister1Name" type="Label" parent="Illuminati"]
+z_index = 1
+offset_left = -126.0
+offset_top = -168.0
+offset_right = 113.0
+offset_bottom = -105.0
+text = "???
+Head of the Illuminati"
+label_settings = SubResource("LabelSettings_20r76")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Pirate" type="Sprite2D" parent="."]
+position = Vector2(-137, 454)
+texture = ExtResource("34_530o4")
+script = ExtResource("23_4who0")
+
+[node name="Minister1Name" type="Label" parent="Pirate"]
+z_index = 1
+offset_left = -126.0
+offset_top = -202.0
+offset_right = 113.0
+offset_bottom = -139.0
+text = "Jonsey Greybeard
+Pirate, obviously"
+label_settings = SubResource("LabelSettings_20r76")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="timeout" from="glitch_timer" to="." method="_on_glitch_timer_timeout"]
+[connection signal="mouse_entered" from="option_1" to="." method="_on_option_1_mouse_entered"]
+[connection signal="mouse_exited" from="option_1" to="." method="_on_option_1_mouse_exited"]
+[connection signal="pressed" from="option_1" to="." method="_on_option_1_pressed"]
+[connection signal="mouse_entered" from="option_2" to="." method="_on_option_2_mouse_entered"]
+[connection signal="mouse_exited" from="option_2" to="." method="_on_option_2_mouse_exited"]
+[connection signal="pressed" from="option_2" to="." method="_on_option_2_pressed"]

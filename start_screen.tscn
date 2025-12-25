@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://biltswybvefvu"]
+
+[ext_resource type="Script" path="res://scripts/startscreen.gd" id="1_4fqgi"]
+[ext_resource type="FontFile" uid="uid://bq8xnhyt1tj7" path="res://assets/upheavtt.ttf" id="2_uiqix"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oir4k"]
+font = ExtResource("2_uiqix")
+font_size = 30
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("1_4fqgi")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 842.0
+offset_top = 526.0
+offset_right = 1078.0
+offset_bottom = 554.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Click to start"
+label_settings = SubResource("LabelSettings_oir4k")

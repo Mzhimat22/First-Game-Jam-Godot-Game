@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://dk3pveg3ivciy"]
+
+[ext_resource type="Texture2D" uid="uid://dflqxvxohjdvu" path="res://assets/Patch Notes Logo.png" id="1_e0hrf"]
+[ext_resource type="Script" path="res://scripts/splash_scene.gd" id="1_nhswh"]
+[ext_resource type="FontFile" uid="uid://bq8xnhyt1tj7" path="res://assets/upheavtt.ttf" id="2_6ghur"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b5mtn"]
+font = ExtResource("2_6ghur")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_fr8ds"]
+font = ExtResource("2_6ghur")
+font_size = 50
+font_color = Color(0.184314, 0.803922, 0.184314, 1)
+
+[node name="SplashScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nhswh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 550)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_e0hrf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -314.5
+offset_top = 160.0
+offset_right = 314.5
+offset_bottom = 820.0
+grow_horizontal = 2
+text = "Made by
+
+
+for the
+
+
+
+
+
+
+
+
+
+
+Game jam"
+label_settings = SubResource("LabelSettings_b5mtn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.5
+offset_top = -275.0
+offset_right = 350.5
+offset_bottom = -229.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "A penguin from the desert"
+label_settings = SubResource("LabelSettings_fr8ds")
+horizontal_alignment = 1

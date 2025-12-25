@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://tt5h628gtgbl"]
+
+[ext_resource type="Script" path="res://scripts/h2p.gd" id="1_k8g1r"]
+[ext_resource type="Texture2D" uid="uid://b7c1i5xrb20pe" path="res://assets/Background(2).png" id="2_ufnlg"]
+[ext_resource type="Texture2D" uid="uid://vv8jw6kp0b1y" path="res://assets/TextBox.png" id="3_i1412"]
+[ext_resource type="Texture2D" uid="uid://6bxymbyf8lsn" path="res://assets/Button.png" id="4_7c4oc"]
+[ext_resource type="FontFile" uid="uid://bq8xnhyt1tj7" path="res://assets/upheavtt.ttf" id="4_mdknw"]
+[ext_resource type="Texture2D" uid="uid://d3mkiaqyexm6x" path="res://assets/HoverButton.png" id="5_tids1"]
+[ext_resource type="Texture2D" uid="uid://c05ja8bf0js1q" path="res://assets/PressedButton(2).png" id="6_s75sx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5obvu"]
+texture = ExtResource("4_7c4oc")
+expand_margin_bottom = 3.0
+modulate_color = Color(0.393086, 0.393086, 0.393085, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qkdka"]
+texture = ExtResource("5_tids1")
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kgova"]
+texture = ExtResource("6_s75sx")
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8mpcd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_od8pe"]
+font = ExtResource("4_mdknw")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[node name="How 2 Play" type="Node2D"]
+script = ExtResource("1_k8g1r")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(960, 540)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ufnlg")
+
+[node name="BackButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 960.0
+offset_top = 800.0
+offset_right = 1006.0
+offset_bottom = 831.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_mdknw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5obvu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qkdka")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kgova")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8mpcd")
+text = "OK"
+
+[node name="TextHolder" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(970.5, 679.5)
+scale = Vector2(2.22813, 4.02407)
+texture = ExtResource("3_i1412")
+
+[node name="h2p" type="Label" parent="."]
+offset_left = 370.0
+offset_top = 243.0
+offset_right = 1608.0
+offset_bottom = 726.0
+text = "You have just been elected as president of the Republic of Overflowistan!
+
+Your goals are to:
+	- Manage your spending to keep debt minimal!
+	- Satisfy your citizens to keep dissaproval rates low!
+	- Enforce the law to ensure crime rates remains low!
+	- And be cordial with foreign countries to not raise global tension!
+
+Unfortunately, the decisions you make as leader will raise at least one of these rates 
+
+Fortunately, the Republic of Overflowistan is a unique place, as anytime your debt, 
+dissaproval, crime, or tension rises by too much, the value overflows back to zero!
+
+Make sure to not have any of the four rates above 50% for too long
+
+If you don't have all four bars lower than the threshold for a set amount of days, you lose!
+
+Try to last as many days as possible 
+
+Good luck, Mr. President!"
+label_settings = SubResource("LabelSettings_od8pe")
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,142 @@
+[gd_scene load_steps=14 format=3 uid="uid://bdhwdh3dl0yd8"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_1bpny"]
+[ext_resource type="Texture2D" uid="uid://b7c1i5xrb20pe" path="res://assets/Background(2).png" id="2_4f0of"]
+[ext_resource type="FontFile" uid="uid://bq8xnhyt1tj7" path="res://assets/upheavtt.ttf" id="2_cwquh"]
+[ext_resource type="Texture2D" uid="uid://6bxymbyf8lsn" path="res://assets/Button.png" id="3_kdwd1"]
+[ext_resource type="Texture2D" uid="uid://d3mkiaqyexm6x" path="res://assets/HoverButton.png" id="4_c70yq"]
+[ext_resource type="Texture2D" uid="uid://c05ja8bf0js1q" path="res://assets/PressedButton(2).png" id="5_ounlf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1m5rs"]
+line_spacing = 16.0
+font = ExtResource("2_cwquh")
+font_size = 50
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0slfv"]
+texture = ExtResource("3_kdwd1")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 12.0
+expand_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jgyah"]
+texture = ExtResource("4_c70yq")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 12.0
+expand_margin_bottom = 11.0
+modulate_color = Color(0.585062, 0.585062, 0.585062, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lye1m"]
+texture = ExtResource("5_ounlf")
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 12.0
+expand_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sk72l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_26nrn"]
+font = ExtResource("2_cwquh")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_53fkw"]
+font = ExtResource("2_cwquh")
+font_size = 20
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_1bpny")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(960, 540)
+scale = Vector2(2, 2)
+texture = ExtResource("2_4f0of")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 686.0
+offset_top = 373.0
+offset_right = 1391.0
+offset_bottom = 442.0
+text = "Welcome to Overflowistan"
+label_settings = SubResource("LabelSettings_1m5rs")
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 988.0
+offset_top = 560.0
+offset_right = 1035.0
+offset_bottom = 591.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cwquh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0slfv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jgyah")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lye1m")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sk72l")
+text = "Start"
+
+[node name="How to Play" type="Button" parent="."]
+offset_left = 965.0
+offset_top = 600.0
+offset_right = 1065.0
+offset_bottom = 631.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cwquh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0slfv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jgyah")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lye1m")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sk72l")
+text = "How to Play"
+
+[node name="Compendium" type="Button" parent="."]
+offset_left = 959.0
+offset_top = 638.0
+offset_right = 1076.0
+offset_bottom = 669.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cwquh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0slfv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jgyah")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lye1m")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sk72l")
+text = "Compendium"
+
+[node name="Credits" type="Button" parent="."]
+offset_left = 983.0
+offset_top = 680.0
+offset_right = 1049.0
+offset_bottom = 711.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cwquh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0slfv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jgyah")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lye1m")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sk72l")
+text = "Credits"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 900.0
+offset_top = 902.0
+offset_right = 1143.0
+offset_bottom = 930.0
+text = "Press ESC to exit game"
+label_settings = SubResource("LabelSettings_26nrn")
+
+[node name="Label3" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 957.0
+offset_top = 841.0
+offset_right = 1077.0
+offset_bottom = 880.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_53fkw")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="How to Play" to="." method="_on_h_2p_button_pressed"]
+[connection signal="pressed" from="Compendium" to="." method="_on_character_compendium_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

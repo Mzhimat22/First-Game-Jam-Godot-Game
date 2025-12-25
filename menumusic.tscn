@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvmes25btt82u"]
+
+[ext_resource type="Script" path="res://scripts/menumusic.gd" id="1_7lxop"]
+[ext_resource type="AudioStream" uid="uid://bvi0df6wgbw0" path="res://assets/Overflowistan_anthem.ogg" id="1_ok7gr"]
+
+[node name="menumusic" type="Node2D"]
+script = ExtResource("1_7lxop")
+
+[node name="menusong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_ok7gr")
